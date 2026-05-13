@@ -4,10 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maher Enterprises | 25 Years of Architectural Excellence in Karachi</title>
+    <title>MAHER ENTERPRISES | Industrial Construction & Real Estate Experts</title>
     <meta name="description"
-        content="Maher Enterprises is a real estate and construction giant with a 25-year legacy in Karachi. Luxury Property Acquisition, Leasing, and Structural Mastery.">
-    <link rel="stylesheet" href="style.css">
+        content="Maher Enterprises: Karachi's leading experts in industrial-chic architecture, commercial development on Shara-e-Faisal, and luxury residential projects.">
+    
+    <!-- Heavy Industrial Design System -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/services.css"> <!-- Now Project Lifecycle -->
+    <link rel="stylesheet" href="css/projects.css"> <!-- Commercial & Residential Portfolio -->
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -16,140 +24,202 @@
     <header id="header">
         <div class="logo-container">
             <div class="logo">
-                <img src="assets/Maher_Enterprises_logo_construction_202605101808.jpeg" alt="Maher Enterprises Logo"
-                    onerror="this.src='https://via.placeholder.com/100?text=M'">
+                <img src="assets/logo.png" alt="Maher Logo"
+                    onerror="this.src='https://via.placeholder.com/100?text=MAHER'">
             </div>
         </div>
+        <button class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#lifecycle">Process</a></li>
+            <li><a href="#commercial">Commercial</a></li>
+            <li><a href="#residential">Residential</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+        </ul>
     </header>
 
     <section class="hero" id="home">
-        <div class="hero-bg"></div>
+        <div class="hero-side hero-left"></div>
+        <div class="hero-side hero-right"></div>
         <div class="hero-content">
-            <h1>25 Years of Building Karachi’s Skyline</h1>
-            <p>Real Estate • Construction • Design</p>
-        </div>
-    </section>
-
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Legacy of Trust</h2>
-                    <p>For over two and a half decades, Maher Enterprises has stood as a beacon of architectural
-                        excellence and integrity in the heart of Karachi. Our journey from a local firm to a real estate
-                        giant is built on the foundation of unwavering trust and commitment to our clients.</p>
-                    <p>We don't just build structures; we build legacies. Our "Foundation to Finish" philosophy ensures
-                        that every project we undertake is executed with precision, luxury, and the highest standards of
-                        structural engineering.</p>
-                </div>
-                <div class="gold-badge">
-                    <h3>25</h3>
-                    <p class="brand-font">Years of Excellence</p>
-                </div>
+            <h1>MAHER<br>ENTERPRISES</h1>
+            <div class="hero-tagline">
+                <span>CONSTRUCTION</span>
+                <span>REAL ESTATE</span>
+                <span>DESIGN</span>
             </div>
         </div>
     </section>
 
-    <section class="services" id="services">
+    <!-- Project Lifecycle Section -->
+    <section class="lifecycle" id="lifecycle">
         <div class="container">
             <div class="section-title">
-                <h2>Our Four Pillars</h2>
+                <h2>Project Lifecycle</h2>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-building-circle-check"></i>
-                    <h3>Sales</h3>
-                    <p>Luxury Property Acquisition. Featured high-end bungalows and commercial plots in Karachi's most
-                        prestigious locations.</p>
-                    <a href="#" class="learn-more">Learn More</a>
+            <div class="lifecycle-grid">
+                <div class="lifecycle-card">
+                    <span class="step-num">01</span>
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Sale</h3>
+                    <p>Maximizing value for your industrial and commercial assets.</p>
                 </div>
-                <div class="service-card">
+                <div class="lifecycle-card">
+                    <span class="step-num">02</span>
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Buy</h3>
+                    <p>Strategic acquisition of prime Karachi real estate.</p>
+                </div>
+                <div class="lifecycle-card">
+                    <span class="step-num">03</span>
                     <i class="fas fa-key"></i>
                     <h3>Rent</h3>
-                    <p>Premium Residential & Corporate Leasing. Exclusive listings for corporate giants and high-end
-                        residential clients.</p>
-                    <a href="#" class="learn-more">Learn More</a>
+                    <p>Premium leasing solutions for corporate giants.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-helmet-safety"></i>
-                    <h3>Construction</h3>
-                    <p>Foundation to Finish Structural Mastery. Leading the way in structural engineering and premium
-                        construction services.</p>
-                    <a href="#" class="learn-more">Learn More</a>
+                <div class="lifecycle-card">
+                    <span class="step-num">04</span>
+                    <i class="fas fa-hard-hat"></i>
+                    <h3>Build</h3>
+                    <p>Foundation to finish structural excellence.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-couch"></i>
-                    <h3>Interior Design</h3>
-                    <p>Bespoke Modern Living. Creating visual focus on bespoke luxury spaces that redefine modern
-                        lifestyle.</p>
-                    <a href="#" class="learn-more">Learn More</a>
+                <div class="lifecycle-card">
+                    <span class="step-num">05</span>
+                    <i class="fas fa-pencil-ruler"></i>
+                    <h3>Design</h3>
+                    <p>Modern industrial-chic aesthetic mastery.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="gallery" id="gallery">
-        <div class="section-title">
-            <h2 style="color: var(--marble-white)">Project Gallery</h2>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="assets/Construction_to_finished_apartment_202605101807.jpeg" alt="Project 1"
-                    onerror="this.src='https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1000'">
-                <div class="gallery-overlay">
-                    <p class="brand-font">Modern Apartments</p>
+    <!-- Commercial Projects Section -->
+    <section class="portfolio-section" id="commercial">
+        <div class="container">
+            <div class="portfolio-header">
+                <div class="section-title">
+                    <h2 style="color: var(--white)">Commercial</h2>
                 </div>
+                <p style="color: var(--orange); font-weight: 700; margin-bottom: 6rem;">SHARA-E-FAISAL PROJECTS</p>
             </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1000"
-                    alt="Project 2">
-                <div class="gallery-overlay">
-                    <p class="brand-font">Luxury Villa</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <!-- Matching "The Shara-e-Faisal Executive Hub" intent -->
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000" alt="Maher Corporate Tower">
+                    <div class="portfolio-info">
+                        <span class="location">Shara-e-Faisal</span>
+                        <h3>MAHER EXECUTIVE HUB</h3>
+                        <a href="#" class="btn-industrial">View Project</a>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6199f7d009?auto=format&fit=crop&q=80&w=1000"
-                    alt="Project 3">
-                <div class="gallery-overlay">
-                    <p class="brand-font">Corporate Plaza</p>
+                <div class="portfolio-card">
+                    <!-- Matching "The Bespoke Karachi Office" intent -->
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000" alt="Executive Suite">
+                    <div class="portfolio-info">
+                        <span class="location">Nursery</span>
+                        <h3>BESPOKE EXECUTIVE SUITES</h3>
+                        <a href="#" class="btn-industrial">View Project</a>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607687940-4e2a09695d51?auto=format&fit=crop&q=80&w=1000"
-                    alt="Project 4">
-                <div class="gallery-overlay">
-                    <p class="brand-font">Interior Mastery</p>
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&q=80&w=1000" alt="Financial Plaza">
+                    <div class="portfolio-info">
+                        <span class="location">KDA Scheme 1</span>
+                        <h3>FINANCIAL PLAZA</h3>
+                        <a href="#" class="btn-industrial">View Project</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Residential Portfolio Section -->
+    <section class="portfolio-section" id="residential" style="background: var(--light-gray); color: var(--dark-slate);">
+        <div class="container">
+            <div class="portfolio-header">
+                <div class="section-title">
+                    <h2>Residential</h2>
+                </div>
+                <p style="color: var(--orange); font-weight: 700; margin-bottom: 6rem;">PREMIUM LIVING SOLUTIONS</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <!-- Matching "The Shara-e-Faisal Penthouse" intent -->
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1000" alt="The Penthouse">
+                    <div class="portfolio-info">
+                        <span class="location">Shara-e-Faisal</span>
+                        <h3>LUXURY SKY PENTHOUSE</h3>
+                        <a href="#" class="btn-industrial">Explore</a>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6199f7d009?auto=format&fit=crop&q=80&w=1000" alt="Modernist Villa">
+                    <div class="portfolio-info">
+                        <span class="location">DHA Phase 8</span>
+                        <h3>THE MODERNIST VILLA</h3>
+                        <a href="#" class="btn-industrial">Explore</a>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1600607687940-4e2a09695d51?auto=format&fit=crop&q=80&w=1000" alt="Skyline Apartments">
+                    <div class="portfolio-info">
+                        <span class="location">Clifton</span>
+                        <h3>SKYLINE RESIDENCY</h3>
+                        <a href="#" class="btn-industrial">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section (Re-styled) -->
+    <section class="team" id="leadership" style="padding: 10rem 0; background: var(--white);">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Founders</h2>
+            </div>
+            <div class="lifecycle-grid"> <!-- Re-using grid for consistency -->
+                <div class="lifecycle-card" style="grid-column: span 2.5; border-left: 2px solid var(--slate);">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Shaukat Hussain</h3>
+                    <p style="color: var(--orange); font-weight: 700;">FOUNDER & CEO</p>
+                    <p>0348-2821426</p>
+                </div>
+                <div class="lifecycle-card" style="grid-column: span 2.5;">
+                    <i class="fas fa-code"></i>
+                    <h3>Murtaza Ali</h3>
+                    <p style="color: var(--orange); font-weight: 700;">PROPTECH DEVELOPER</p>
+                    <p>0304-1186067</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--dark-slate); color: var(--white); padding: 5rem 0; border-top: 10px solid var(--orange);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
+                <div>
+                    <h2 style="font-size: 3rem; margin: 0;">MAHER</h2>
+                    <p>Building Karachi Since 2001</p>
+                </div>
+                <div style="text-align: right;">
+                    <p>Managed by <a href="https://lyntica.com" style="color: var(--orange); text-decoration: none;">Lyntica.com</a></p>
+                    <p>&copy; 2026 MAHER ENTERPRISES</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- UI Elements -->
     <a href="https://wa.me/923127056383" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Maher Enterprises</h3>
-                    <p>Managed by <a href="https://lyntica.com"
-                            style="color: var(--gold); text-decoration: none;">Lyntica.com</a></p>
-                </div>
-                <div class="footer-section">
-                    <p><i class="fas fa-phone" style="color: var(--gold); margin-right: 10px;"></i> Contact: 03127056383
-                    </p>
-                </div>
-                <div class="footer-section social-links" style="text-align: right;">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2026 Maher Enterprises. Web: Coming Soon Inshallah!</p>
-            </div>
-        </div>
-    </footer>
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="logic.js"></script>
 </body>
