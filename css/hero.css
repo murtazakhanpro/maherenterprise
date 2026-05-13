@@ -15,7 +15,7 @@
 }
 
 .hero-left {
-    background-image: linear-gradient(rgba(47, 53, 66, 0.6), rgba(47, 53, 66, 0.6)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=2000');
+    background-image: linear-gradient(rgba(47, 53, 66, 0.6), rgba(47, 53, 66, 0.6)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=100&w=3840');
     border-right: 5px solid var(--orange);
 }
 
@@ -28,7 +28,7 @@
 }
 
 .hero-right {
-    background-image: linear-gradient(rgba(255, 112, 0, 0.2), rgba(47, 53, 66, 0.4)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000');
+    background-image: linear-gradient(rgba(255, 112, 0, 0.2), rgba(47, 53, 66, 0.4)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=100&w=3840');
 }
 
 .hero-right:hover {
