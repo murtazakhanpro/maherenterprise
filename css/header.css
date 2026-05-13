@@ -3,74 +3,82 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 0;
+    padding: 2.5rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--dark-slate);
-    border-bottom: 5px solid var(--orange);
+    transition: var(--transition);
+}
+
+header.scrolled {
+    padding: 1.2rem 5%;
+    background: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .logo-container {
-    background: var(--orange);
-    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .logo {
     width: 50px;
     height: 50px;
-    background: var(--white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
 .logo img {
-    width: 80%;
+    width: 100%;
+    filter: brightness(0) saturate(100%) invert(84%) sepia(26%) decorate(602%) hue-rotate(3deg) brightness(94%) contrast(85%); /* Gold Filter */
 }
 
 .nav-menu {
     display: flex;
+    gap: 3rem;
     list-style: none;
-    margin-right: 4rem;
 }
 
-.nav-menu li a {
+.nav-menu a {
     color: var(--white);
     text-decoration: none;
-    padding: 2.5rem 2rem;
-    display: block;
-    font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    font-weight: 400;
     transition: var(--transition);
+    opacity: 0.7;
 }
 
-.nav-menu li a:hover {
-    background: var(--orange);
-    color: var(--dark-slate);
+.nav-menu a:hover, .nav-menu a.active {
+    color: var(--gold);
+    opacity: 1;
 }
 
 .nav-toggle {
     display: none;
-    color: var(--white);
-    padding: 2rem;
+    background: none;
+    border: none;
+    color: var(--gold);
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 @media (max-width: 992px) {
+    header { padding: 1.5rem 5%; }
     .nav-menu {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background: var(--dark-slate);
+        background: var(--matte-bg);
         flex-direction: column;
+        padding: 4rem;
+        text-align: center;
+        gap: 2rem;
     }
-    .nav-menu.active {
-        display: flex;
-    }
-    .nav-toggle {
-        display: block;
-    }
+    .nav-menu.active { display: flex; }
+    .nav-toggle { display: block; }
 }

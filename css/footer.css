@@ -1,79 +1,78 @@
 footer {
-    background: var(--dark-slate);
-    color: var(--white);
-    padding: 8rem 0;
-    border-top: 10px solid var(--orange);
-    position: relative;
-    overflow: hidden;
+    background: #000000;
+    padding: 8rem 0 4rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
 }
 
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(45deg, var(--orange) 25%, transparent 25%), 
-                      linear-gradient(-45deg, var(--orange) 25%, transparent 25%);
-    background-size: 60px 60px;
-    opacity: 0.03;
-}
-
-.footer-grid {
+.footer-top {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    gap: 4rem;
+    gap: 6rem;
+    margin-bottom: 8rem;
 }
 
 .footer-brand h2 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    color: var(--white);
+    font-size: 3rem;
+    margin-bottom: 2rem;
 }
 
 .footer-brand p {
-    font-size: 1.2rem;
-    color: var(--orange);
-    font-weight: 700;
+    max-width: 400px;
+    opacity: 0.6;
 }
 
-.footer-links h4 {
-    color: var(--orange);
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
+.footer-heading {
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    margin-bottom: 2.5rem;
 }
 
-.footer-links ul {
+.footer-links {
     list-style: none;
 }
 
-.footer-links ul li {
-    margin-bottom: 1rem;
+.footer-links li {
+    margin-bottom: 1.2rem;
 }
 
-.footer-links ul li a {
-    color: var(--white);
+.footer-links a {
+    color: var(--silver);
     text-decoration: none;
     transition: var(--transition);
+    opacity: 0.6;
 }
 
-.footer-links ul li a:hover {
-    color: var(--orange);
+.footer-links a:hover {
+    color: var(--gold);
+    opacity: 1;
     padding-left: 10px;
 }
 
-.copyright {
-    margin-top: 6rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--slate);
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.3);
+}
+
+.address-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    opacity: 0.6;
+}
+
+.address-block i {
+    color: var(--gold);
+    margin-top: 5px;
 }
 
 @media (max-width: 992px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
+    .footer-top { grid-template-columns: 1fr; gap: 4rem; }
+    .footer-bottom { flex-direction: column; gap: 2rem; text-align: center; }
 }

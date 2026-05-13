@@ -1,99 +1,74 @@
-.team {
-    padding: 8rem 2rem;
-    background: #151515;
+.leadership {
+    background: var(--charcoal);
 }
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    margin-top: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 4rem;
 }
 
 .team-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    padding: 3rem;
-    text-align: center;
-    transition: var(--transition);
-    position: relative;
-    border-radius: 15px;
-}
-
-.team-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--gold);
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.team-img {
-    width: 120px;
-    height: 120px;
-    background: var(--charcoal);
-    border: 2px solid var(--gold);
-    border-radius: 50%;
-    margin: 0 auto 2rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    color: var(--gold);
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+    background: var(--glass);
+    border-left: 5px solid var(--gold);
 }
 
 .team-info h3 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    color: var(--white);
     margin-bottom: 0.5rem;
 }
 
-.role {
-    color: var(--gold);
-    font-size: 0.9rem;
+.team-role {
+    font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem;
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    display: block;
 }
 
-.contact-link {
-    display: inline-block;
-    color: var(--marble-white);
+.team-bio {
+    opacity: 0.7;
+    margin-bottom: 2rem;
+}
+
+.team-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--white);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-weight: 700;
     transition: var(--transition);
 }
 
-.contact-link:hover {
+.contact-item:hover {
     color: var(--gold);
 }
 
-.cta {
-    padding: 10rem 2rem;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1448630360428-6e214891295e?auto=format&fit=crop&q=80&w=2000') center/cover fixed;
-    text-align: center;
-}
-
-.cta-content h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.cta-content p {
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-    opacity: 0.8;
-}
-
-.cta-buttons {
+.contact-item i {
+    width: 40px;
+    height: 40px;
+    background: var(--gold);
+    color: var(--charcoal);
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 50%;
 }
 
 @media (max-width: 768px) {
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-    .cta-content h2 {
-        font-size: 2rem;
-    }
+    .team-grid { grid-template-columns: 1fr; }
+    .team-info h3 { font-size: 2rem; }
 }
