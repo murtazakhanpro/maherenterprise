@@ -99,6 +99,28 @@
         padding: 1rem 2rem !important;
         display: block;
         margin: 0 auto;
+        text-align: center;
+    }
+    .hero-logo-m {
+        font-size: 8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+    .hero h1 br {
+        display: none;
+    }
+    .hero-sub {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
+    }
+    .hero-logo-m {
+        font-size: 6rem;
     }
 }
 

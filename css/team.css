@@ -102,3 +102,23 @@
     }
 }
 
+@media (max-width: 480px) {
+    .team-card {
+        padding: 1.5rem 1.2rem;
+        gap: 1rem;
+    }
+    .team-info h3 {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+    .team-role {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.8rem;
+    }
+    .team-bio {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+}
+

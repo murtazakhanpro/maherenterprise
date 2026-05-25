@@ -67,6 +67,10 @@ footer {
     opacity: 0.6;
 }
 
+.footer-contact {
+    padding-bottom: 5rem;
+}
+
 .address-block i {
     color: var(--gold);
     margin-top: 5px;
@@ -107,6 +111,29 @@ footer {
     }
     .footer-contact .address-block p a {
         word-break: break-all;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 3rem 0 2rem;
+    }
+    .footer-top {
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    .footer-brand h2 {
+        font-size: 1.8rem;
+    }
+    .footer-contact .address-block p,
+    .footer-contact .address-block p a {
+        word-break: break-word;
+        overflow-wrap: break-word;
+        font-size: 0.85rem;
+    }
+    .footer-bottom {
+        padding-top: 2rem;
+        font-size: 0.7rem;
     }
 }
 

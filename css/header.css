@@ -63,6 +63,11 @@ header.scrolled {
     color: var(--gold);
     font-size: 1.5rem;
     cursor: pointer;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0.75rem;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 992px) {
@@ -104,7 +109,18 @@ header.scrolled {
         display: flex; 
     }
     .nav-toggle { 
-        display: block; 
+        display: flex; 
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-name p {
+        font-size: 0.55rem !important;
+        letter-spacing: 0.5px !important;
+    }
+    .logo {
+        width: 35px;
+        height: 35px;
     }
 }
 
