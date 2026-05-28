@@ -3,7 +3,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 2.5rem 5%;
+    padding: 2rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,10 +11,11 @@ header {
 }
 
 header.scrolled {
-    padding: 1.2rem 5%;
-    background: rgba(18, 18, 18, 0.95);
+    padding: 1rem 5%;
+    background: rgba(10, 77, 86, 0.97);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--glass-border);
+    border-bottom: 1px solid rgba(225, 173, 1, 0.2);
+    box-shadow: var(--shadow-md);
 }
 
 .logo-container {
@@ -31,7 +32,7 @@ header.scrolled {
 
 .logo img {
     width: 100%;
-    filter: brightness(0) saturate(100%) invert(84%) sepia(26%) decorate(602%) hue-rotate(3deg) brightness(94%) contrast(85%); /* Gold Filter */
+    border-radius: 6px;
 }
 
 .nav-menu {
@@ -46,13 +47,30 @@ header.scrolled {
     text-transform: uppercase;
     font-size: 0.75rem;
     letter-spacing: 2px;
-    font-weight: 400;
+    font-weight: 500;
     transition: var(--transition);
-    opacity: 0.7;
+    opacity: 0.8;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--mustard);
+    transition: var(--transition);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
 }
 
 .nav-menu a:hover, .nav-menu a.active {
-    color: var(--gold);
+    color: var(--mustard);
     opacity: 1;
 }
 
@@ -60,7 +78,7 @@ header.scrolled {
     display: none;
     background: none;
     border: none;
-    color: var(--gold);
+    color: var(--mustard);
     font-size: 1.5rem;
     cursor: pointer;
     min-width: 48px;
@@ -73,9 +91,9 @@ header.scrolled {
 @media (max-width: 992px) {
     header { 
         padding: 1rem 5%; 
-        background: rgba(18, 18, 18, 0.95);
+        background: rgba(10, 77, 86, 0.97);
         backdrop-filter: blur(20px);
-        border-bottom: 1px solid var(--glass-border);
+        border-bottom: 1px solid rgba(225, 173, 1, 0.15);
     }
     .logo-container {
         gap: 1rem;
@@ -97,13 +115,13 @@ header.scrolled {
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(18, 18, 18, 0.98);
-        border-bottom: 1px solid var(--glass-border);
+        background: rgba(10, 77, 86, 0.98);
+        border-bottom: 2px solid var(--mustard);
         flex-direction: column;
         padding: 2.5rem 2rem;
         text-align: center;
         gap: 1.5rem;
-        box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        box-shadow: var(--shadow-lg);
     }
     .nav-menu.active { 
         display: flex; 
@@ -123,4 +141,3 @@ header.scrolled {
         height: 35px;
     }
 }
-

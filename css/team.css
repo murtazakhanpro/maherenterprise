@@ -1,5 +1,5 @@
 .leadership {
-    background: var(--charcoal);
+    background: var(--white);
 }
 
 .team-grid {
@@ -13,27 +13,35 @@
     flex-direction: column;
     gap: 2rem;
     padding: 3rem;
-    background: var(--glass);
-    border-left: 5px solid var(--gold);
+    background: var(--off-white);
+    border-left: 5px solid var(--olive);
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.team-card:hover {
+    border-left-color: var(--mustard);
+    box-shadow: var(--shadow-md);
 }
 
 .team-info h3 {
     font-size: 2.5rem;
-    color: var(--white);
+    color: var(--teal);
     margin-bottom: 0.5rem;
 }
 
 .team-role {
     font-size: 1rem;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--olive);
     letter-spacing: 3px;
     margin-bottom: 2rem;
     display: block;
+    font-weight: 600;
 }
 
 .team-bio {
-    opacity: 0.7;
+    color: var(--text-muted);
     margin-bottom: 2rem;
 }
 
@@ -47,78 +55,45 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    color: var(--white);
+    color: var(--teal);
     text-decoration: none;
     font-weight: 700;
     transition: var(--transition);
 }
 
 .contact-item:hover {
-    color: var(--gold);
+    color: var(--mustard);
 }
 
 .contact-item i {
     width: 40px;
     height: 40px;
-    background: var(--gold);
-    color: var(--charcoal);
+    background: var(--mustard);
+    color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    font-size: 1rem;
 }
 
 @media (max-width: 992px) {
-    .team-grid {
-        gap: 2rem;
-    }
-    .team-card {
-        padding: 2.5rem 2rem;
-    }
-    .team-info h3 {
-        font-size: 2.2rem;
-    }
+    .team-grid { gap: 2rem; }
+    .team-card { padding: 2.5rem 2rem; }
+    .team-info h3 { font-size: 2.2rem; }
 }
 
 @media (max-width: 768px) {
-    .team-grid { 
-        grid-template-columns: 1fr; 
-        gap: 1.5rem;
-    }
-    .team-card {
-        padding: 2rem 1.5rem;
-        gap: 1.5rem;
-    }
-    .team-info h3 { 
-        font-size: 1.8rem; 
-    }
-    .team-role {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-    }
-    .team-bio {
-        font-size: 0.95rem;
-        margin-bottom: 1.5rem;
-    }
+    .team-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .team-card { padding: 2rem 1.5rem; gap: 1.5rem; }
+    .team-info h3 { font-size: 1.8rem; }
+    .team-role { font-size: 0.9rem; margin-bottom: 1rem; }
+    .team-bio { font-size: 0.95rem; margin-bottom: 1.5rem; }
 }
 
 @media (max-width: 480px) {
-    .team-card {
-        padding: 1.5rem 1.2rem;
-        gap: 1rem;
-    }
-    .team-info h3 {
-        font-size: 1.4rem;
-        letter-spacing: 1px;
-    }
-    .team-role {
-        font-size: 0.75rem;
-        letter-spacing: 1px;
-        margin-bottom: 0.8rem;
-    }
-    .team-bio {
-        font-size: 0.85rem;
-        margin-bottom: 1rem;
-    }
+    .team-card { padding: 1.5rem 1.2rem; gap: 1rem; }
+    .team-info h3 { font-size: 1.4rem; letter-spacing: 1px; }
+    .team-role { font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 0.8rem; }
+    .team-bio { font-size: 0.85rem; margin-bottom: 1rem; }
 }
-

@@ -1,16 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
 
 :root {
-    --charcoal: #1A1A1A;
-    --deep-slate: #2C3E50;
-    --gold: #D4AF37; /* Brushed Metallic Gold */
-    --gold-bright: #F1C40F;
-    --silver: #ECF0F1;
+    /* ── New Palette: Teal · Olive · Mustard · White ── */
+    --teal: #0A4D56;
+    --teal-dark: #073A41;
+    --teal-light: #0E6B78;
+    --olive: #4B5320;
+    --olive-light: #6B7530;
+    --olive-muted: rgba(75, 83, 32, 0.12);
+    --mustard: #E1AD01;
+    --mustard-hover: #F0C030;
     --white: #FFFFFF;
-    --matte-bg: #121212;
+    --off-white: #F9FAF7;
+    --body-text: #3A3F2E;
+    /* Dark olive-slate for body copy */
+    --text-muted: #6B7068;
+    /* Lighter for secondary text */
+    --border-light: #E2E5DC;
+    /* Subtle olive-tinted border */
+
+    /* ── Legacy aliases (for minimal breakage) ── */
+    --charcoal: var(--teal-dark);
+    --deep-slate: var(--teal);
+    --gold: var(--mustard);
+    --gold-bright: var(--mustard-hover);
+    --silver: var(--off-white);
+    --matte-bg: var(--off-white);
+
+    /* ── System ── */
     --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    --glass: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(212, 175, 55, 0.2);
+    --glass: rgba(10, 77, 86, 0.04);
+    --glass-border: rgba(10, 77, 86, 0.12);
+    --shadow-sm: 0 2px 8px rgba(10, 77, 86, 0.08);
+    --shadow-md: 0 8px 24px rgba(10, 77, 86, 0.12);
+    --shadow-lg: 0 16px 48px rgba(10, 77, 86, 0.16);
 }
 
 * {
@@ -20,19 +43,23 @@
 }
 
 body {
-    background-color: var(--matte-bg);
-    color: var(--silver);
+    background-color: var(--white);
+    color: var(--body-text);
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
+    font-weight: 400;
+    line-height: 1.7;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
-h1, h2, h3, .brand-font {
+h1,
+h2,
+h3,
+.brand-font {
     font-family: 'Cinzel', serif;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: var(--gold);
+    color: var(--teal);
 }
 
 .heading-alt {
@@ -42,6 +69,10 @@ h1, h2, h3, .brand-font {
     font-style: italic;
 }
 
+a {
+    transition: var(--transition);
+}
+
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -49,19 +80,29 @@ h1, h2, h3, .brand-font {
 }
 
 section {
-    padding: 12rem 0;
+    padding: 10rem 0;
+}
+
+/* Alternating section backgrounds */
+section:nth-of-type(odd) {
+    background: var(--white);
+}
+
+section:nth-of-type(even) {
+    background: var(--off-white);
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
 }
 
 .section-title h2 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     position: relative;
     display: inline-block;
     padding-bottom: 2rem;
+    color: var(--teal);
 }
 
 .section-title h2::after {
@@ -71,32 +112,51 @@ section {
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
-    height: 2px;
-    background: var(--gold);
+    height: 3px;
+    background: var(--mustard);
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
     width: 6px;
 }
+
 ::-webkit-scrollbar-track {
-    background: var(--matte-bg);
+    background: var(--off-white);
 }
+
 ::-webkit-scrollbar-thumb {
-    background: var(--gold);
+    background: var(--teal);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--mustard);
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(50px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes goldShimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
 }
 
-/* Global Responsive Improvements */
+/* ── Global Responsive ── */
 @media (max-width: 1200px) {
     .container {
         padding: 0 2.5rem;
@@ -107,12 +167,15 @@ section {
     .container {
         padding: 0 1.5rem;
     }
+
     section {
         padding: 6rem 0;
     }
+
     .section-title {
         margin-bottom: 4rem;
     }
+
     .section-title h2 {
         font-size: 2.2rem;
         padding-bottom: 1.5rem;
@@ -123,16 +186,18 @@ section {
     .container {
         padding: 0 1rem;
     }
+
     section {
         padding: 4rem 0;
     }
+
     .section-title {
         margin-bottom: 3rem;
     }
+
     .section-title h2 {
         font-size: 1.5rem;
         letter-spacing: 1px;
         padding-bottom: 1rem;
     }
 }
-

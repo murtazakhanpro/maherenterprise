@@ -1,6 +1,6 @@
 .about {
-    background: var(--marble-white);
-    color: var(--charcoal);
+    background: var(--off-white);
+    color: var(--body-text);
     padding: 8rem 2rem;
     position: relative;
 }
@@ -13,7 +13,7 @@
     transform: translateX(-50%);
     width: 2px;
     height: 100px;
-    background: var(--gold);
+    background: var(--mustard);
 }
 
 .about-content {
@@ -25,6 +25,7 @@
 
 .about-text h2 {
     font-size: 2.5rem;
+    color: var(--teal);
     margin-bottom: 2rem;
     position: relative;
     display: inline-block;
@@ -37,25 +38,27 @@
     left: 0;
     width: 60px;
     height: 3px;
-    background: var(--gold);
+    background: var(--mustard);
 }
 
 .about-text p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    color: #444;
+    color: var(--text-muted);
 }
 
 .gold-badge {
-    border: 2px solid var(--gold);
+    border: 2px solid var(--olive);
     padding: 3rem;
     text-align: center;
     position: relative;
+    background: var(--white);
+    border-radius: 4px;
 }
 
 .gold-badge h3 {
     font-size: 4rem;
-    color: var(--gold);
+    color: var(--mustard);
     margin: 0;
 }
 
