@@ -9,14 +9,44 @@
     background: var(--teal-dark);
 }
 
-.hero-bg {
+.hero-slides {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(10, 77, 86, 0.55), rgba(7, 58, 65, 0.8)), url('https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=100&w=3840') center/cover no-repeat;
     z-index: 1;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), transform 6s linear;
+    transform: scale(1.08);
+}
+
+.hero-slide.active {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+/* Linear-gradient overlay to apply deep teal tint and readability protection */
+.hero-slides::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(10, 77, 86, 0.55), rgba(7, 58, 65, 0.8));
+    z-index: 2;
 }
 
 .hero-overlay {
