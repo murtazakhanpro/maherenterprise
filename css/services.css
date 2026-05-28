@@ -4,18 +4,17 @@
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
 }
 
 .service-card {
     background: var(--glass);
     border: 1px solid var(--glass-border);
-    padding: 4rem 3rem;
+    padding: 3rem 2.5rem;
     position: relative;
     overflow: hidden;
     transition: var(--transition);
-    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,20 +37,20 @@
 }
 
 .service-card:hover {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
     border-color: var(--gold);
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 .service-card i {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: var(--gold);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .service-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
     color: var(--white);
 }
 
@@ -61,8 +60,10 @@
     opacity: 0.6;
 }
 
-.service-card .card-link {
-    margin-top: 2rem;
+.service-card .card-link,
+.service-card .learn-more {
+    margin-top: auto;
+    padding-top: 1.5rem;
     color: var(--gold);
     text-decoration: none;
     text-transform: uppercase;
@@ -72,6 +73,12 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: var(--transition);
+}
+
+.service-card .card-link:hover,
+.service-card .learn-more:hover {
+    letter-spacing: 4px;
 }
 
 .service-card .card-link i {
@@ -79,42 +86,24 @@
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    .services-grid {
-        gap: 1.5rem;
-    }
-    .service-card {
-        padding: 2.5rem 1.5rem;
-        height: auto;
-        min-height: 360px;
-    }
-    .service-card i {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-    }
-    .service-card h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-    .service-card p {
-        font-size: 0.9rem;
-    }
+/* Featured card — spans full width on last row */
+.service-card-featured {
+    background: linear-gradient(135deg, var(--glass), rgba(212, 175, 55, 0.08));
+    border-color: rgba(212, 175, 55, 0.3);
 }
 
-@media (max-width: 480px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    .service-card {
-        padding: 2rem 1.2rem;
-        min-height: auto;
-    }
+.service-card-featured h3 {
+    color: var(--gold);
 }
 
-@media (min-width: 481px) and (max-width: 1024px) {
+/* ── Responsive ── */
+@media (max-width: 1024px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
+
+    /* Center the last card if it's alone on its row */
     .services-grid .service-card:last-child:nth-child(odd) {
         grid-column: 1 / -1;
         max-width: 500px;
@@ -122,3 +111,41 @@
     }
 }
 
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .service-card i {
+        font-size: 2.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .service-card p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 2rem 1.2rem;
+    }
+
+    .services-grid .service-card:last-child:nth-child(odd) {
+        max-width: 100%;
+    }
+}
